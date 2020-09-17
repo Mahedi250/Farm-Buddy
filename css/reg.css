@@ -1,0 +1,324 @@
+.popup{
+    
+    background: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    justify-content: center;
+    display:none;
+    align-items: center;
+    position: fixed;
+    
+    
+    
+}
+.popup-con{
+    margin-top: 100px;
+    height: 580px;
+    width: 900px;
+    padding-bottom:530px;
+    margin-bottom: 100px;;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    position: relative;
+    
+    
+}
+.close{
+    
+position: relative;
+    float: right;
+    margin-right: 9px;
+    margin-top: 10px;
+    margin-left: 2px;
+    background-color: white;
+    
+    border-radius: 5px;
+    border-color:red;
+    cursor: pointer;
+    
+    
+    
+    
+}
+
+
+#personal{
+    
+    background-color: ;
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    margin-top: 40px;
+    margin-left: 3px; //160 //3
+    transition:  2s;
+    
+    
+    
+}
+
+#organazaion{
+    
+    background-color: ;
+    position: relative;
+    width: 400px;
+    height: 500px;
+    margin-top: 40px;
+    margin-left: 450px;
+    float:left;
+    //display:none;
+    
+        
+   
+    
+    
+    
+}
+
+
+#header{
+    
+    position: relative;
+    text-align: center;
+    margin-left: 80px;
+    
+    
+}
+
+
+.personal-con{
+   
+margin-left: 100px;
+position: relative;
+
+
+
+    
+    
+}
+
+.personal-con label{
+ 
+ 
+ margin-top: 30px;
+
+
+
+    
+    
+    
+}
+
+
+.personal-con.error input{
+    
+    
+    border-color: #e74c3c;
+    
+    
+} 
+
+.personal-con.suc input{
+    
+    
+    border-color: #2ecc71;
+    
+    
+} 
+
+
+
+.personal-con input,select{
+   
+     border-color: #2ecc71;
+    border: 2px solid;
+    border-radius: 5px;
+    display: inline;
+    float: right;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 30px;
+    width:
+    
+    
+    
+    
+    font-size: 10px;
+    
+   
+    
+    
+}
+
+
+
+
+.personal-con i{
+    
+   position: absolute;
+   right: 28px;
+  top: 38px;
+   visibility: hidden;
+    
+      
+
+
+    
+    
+    
+}
+
+.personal-con.suc i.fa-check-circle{
+    
+    color: #2ecc71;
+   visibility: visible;
+    
+    
+} 
+
+.personal-con.error i.fa-exclamation-circle{
+    
+    color: #e74c3c;
+   visibility: visible;
+    
+    
+} 
+.personal-con small{
+    
+   position: absolute; 
+    display: block;
+    margin-left: 100px;
+ visibility: hidden;
+  
+
+   
+    
+}
+.personal-con.error small{
+    
+   color: #e74c3c;
+    visibility: visible;
+
+   
+    
+}
+
+
+
+
+
+#line{
+    position: absolute;
+    background-color: black;
+    
+       
+        margin-left: 455px;
+        margin-top: 150px;
+        width: 4px;
+    height: 200px;
+    border-radius: 5px;
+
+    //display: none
+        
+    
+    
+}
+
+#submit{
+    
+ position: absolute;
+margin-left: 400px;
+margin-top: 530px
+    
+    
+}
+
+#submit input{
+    
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px;
+    
+}
+
+
+.system-cjk{
+    
+    
+
+   
+  margin-left: 100px;
+    margin-top: 17px;
+    margin-bottom: -30px;
+    
+  
+    
+}
+.system-cjk input{
+    
+    margin-left: 27px
+    
+}
+.system-cjk label{
+    
+    margin-right:20px
+    
+}
+.system-cjk  small{
+    
+    
+    margin-left: 90px;
+    visibility: hidden;
+    
+    
+}
+.system-cjk span{
+    
+    margin-left: 5px;
+    
+}
+
+#add input{
+    
+   
+  
+    
+    
+}
+
+
+.system-cjk.error small{
+    
+   color: #e74c3c;
+    visibility: visible;
+
+   
+    
+}
+
+ //validtation
+
+#conpass{
+    
+
+    
+    
+}
+
+#add small{
+    
+    margin-top: 40px
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
