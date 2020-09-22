@@ -1,6 +1,6 @@
 
  
- var arr=[];
+ var arr='';
  var userv=2;
  var ful_names= 1;
  var emails = 1;
@@ -25,7 +25,7 @@
  var c_countryv ="";
  var c_addv = "";
   var c_liv = "";
-   
+   var params=null;
 
 
 function selectedItem(){
@@ -56,7 +56,7 @@ function selectedItem(){
             arr=getvalue();
         
             
-          
+         
 
 
         });
@@ -111,37 +111,43 @@ function selectedItem(){
 
     if(userv==1){
 
-        admin();
+       admin();
   
         if( ful_names!=1 && emails!=1 &&contacts!=1 && usernames!=1 && passwords!=1 && rpasswords!=1){
 
 
+           params='name='+ful_namev+'&email='+emailv+'&conatct='+contactv+'&username='+usernamev+'&password='+passordv+'&usertype='+userv;
 
-
-            alert(1);
+           loadResponsePost(params);
        
          }
 
 
 
        
-    }    
+    }   
     
     else if(userv==2)
     {
 
 
 
-   Client();
+  Client();
 
    if( ful_names!=1 && emails!=1 &&contacts!=1 && usernames!=1 && passwords!=1 && rpasswords!=1 && cnames!=1 && c_countrys!=1 && c_adds!=1 && c_lis!=1 && sysu!=1){
 
 
+ 
+   
 
+   alert(arr);
 
-    alert(2);
-
+    params='name='+ful_namev+'&email='+emailv+'&conatct='+contactv+'&username='+usernamev+'&password='+passordv+'&cname='+cnamev+'&c_country='+c_countryv+'&c_add='+c_addv+'&c_li='+c_liv+'&usertype='+userv+'&system='+arr; 
+    loadResponsePost(params);
+  
+    
  }
+    
 
 
     }
@@ -556,22 +562,25 @@ return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.te
    function getvalue(){
 
    
-    var arr=[];
+    var arr='';
 
     for(i=0;i<2;i++){
      if(chk[i].checked==true){
-
-      arr[i]=chk[i].value;
+ 
+        arr+=chk[i].value;
+    
 
 
      }
     
+     
+
+     }
 
 
+    
 
-    }
-
-    return arr;
+    return arr.trim();
 
 
 
@@ -579,11 +588,52 @@ return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.te
 
    }
 
+
+
+
+
+
+   function loadResponsePost(data){
+   
+    
+
+    //Creates an XMLHttpRequest object
+    var xhr = new XMLHttpRequest();
+
+    //opens the file with a specific request in asyncronous communication mode
+    xhr.open('POST','php/Reg.php',true);
+    //use setRequestHeader method for letting the browser know about the post request parameters
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    //sends the request
+    xhr.send(data);
+ 
+    xhr.onload = function(){
+      if(this.status == 200){
+      document.write("hoisee mama!!");
+      }else if(this.status == 404){
+        document.write("hoinai  mama!!");
+      }
+    };
+
+    
+  }
+
+
+
+
+
+
+
+
+
   
     
      
  }
 
+
+
+ 
   
   
   

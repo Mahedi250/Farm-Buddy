@@ -1,17 +1,15 @@
 #loginbox{
     
     margin-left: 600px;
-    margin-top: 50px;
+    margin-top: 10px;
     height: 405px;
     width: 350px;
     position: relative;
-    border-radius: 50px;
-    box-shadow: 0 8px 6px -6px black;
-   
-    padding-top: 20px;
     
+    box-shadow: 0 8px 6px -6px black;
+    margin-top: 150px; 
      text-align: center;
-    background-color:rgba(255, 255, 255, 0.85);
+    background-color:rgba(127, 178, 127, 0.88);
     
     
     
