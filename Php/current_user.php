@@ -2,7 +2,7 @@
  require "Dbcon.php";
 $admin_ac=0;
 
-$data='<table id="user_table"  class="table">
+$data='<table   class="table">
 <thead class="thead-dark">
   <tr>
     <th scope="col">Crediential ID</th>
@@ -36,7 +36,7 @@ $chk="";
 if($row['activity']!=0){
 
 $chk=' <label class="switch">
-<input   onchange="SetuserActivity('.$row['cred_id'].')" id="user_activity"   type="checkbox" checked>
+<input   onclick="SetuserActivity('.$row['cred_id'].',1)" id="user_activity"   type="checkbox" checked>
 <span class="slider"></span>
 </label>';
     
@@ -44,7 +44,7 @@ $chk=' <label class="switch">
 
 
     $chk=' <label class="switch">
-    <input onchange="SetuserActivity('.$row['cred_id'].')" id="user_activity"  type="checkbox">
+    <input onclick="SetuserActivity('.$row['cred_id'].',0)" id="user_activity"  type="checkbox">
     <span class="slider"></span>
     </label>';
 

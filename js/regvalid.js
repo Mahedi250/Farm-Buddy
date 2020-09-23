@@ -123,7 +123,7 @@ function selectedItem(){
            if(res!=0){
 
     
-            window,location.href="index.html";
+            window,location.href="pages/confirmation.html";
          
          
          
@@ -159,7 +159,7 @@ function selectedItem(){
     if(res!=0){
 
     
-   window,location.href="index.html";
+   window,location.href="pages/confirmation.html";
 
 
 

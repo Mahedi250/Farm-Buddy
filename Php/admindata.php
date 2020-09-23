@@ -48,7 +48,7 @@ while($row = mysqli_fetch_assoc($res)){
 
         $admin_id= $row['a_id'];
 
-        echo $admin_id;
+        
       /* $admin_id= $row['a_id'];
        $a_fullname=$row['full_name'];
         $a_emai=$row['Email'];

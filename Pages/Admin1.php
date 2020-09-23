@@ -342,21 +342,24 @@ $sql="select * from temp_admin where a_id='$emp_id'";
 
         }
 
-        function SetuserActivity($cred_id){
-            $a_staus=0;
+        function SetuserActivity($cred_id,$a_staus){
+         
        $activity=document.getElementById('user_activity');
 
-       if($activity.checked==true){
+      
 
-        $a_staus=1;
+        if($a_staus==1){
+
+            $a_staus=0;
+        }
+        else{
+
+            $a_staus=1;
+
+        }
 
        
-       }
-       else{
-
-        $a_staus=0;
-         
-       }
+     
        
 
 
@@ -370,7 +373,7 @@ xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 xhr.send($parms);
 xhr.onload = function(){
     if(xhr.status == 200){
-                     
+               
     }else if(this.status == 404){
    
   }
@@ -445,6 +448,31 @@ xhr.onload = function(){
 
 
         }
+
+
+
+
+
+
+        function loadResponse_current_user(){
+   
+   var xhr = new XMLHttpRequest();
+  
+   xhr.open('POST','../php/current_user.php', true);
+   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+   xhr.send();
+   xhr.onload = function(){
+       if(xhr.status == 200){
+       document.getElementById('current_user').innerHTML=this.responseText;                     //
+       }else if(this.status == 404){
+      
+     }
+   };
+ }
+
+
+
+
 
 
        

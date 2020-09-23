@@ -9,6 +9,7 @@ require "../php/Dbcon.php";
   $emp_id= "";
   $client_id= "";
   $man_id= "";
+  $notalloed="";
 
   $uNameErr = '';
   $uPassErr = "";
@@ -88,7 +89,7 @@ require "../php/Dbcon.php";
         }
 
         else{
-          $uPassErr = "you are not allowed";
+          $notalloed= "you are not allowed!!! Plase contact To Admin"."<br>"."Admin@Efarmbuddy.com";
 
         }
         
@@ -149,6 +150,7 @@ require "../php/Dbcon.php";
 
 
       <a href="../index.html"><img src="https://i.ibb.co/WsDsxtR/farm-buddy-black.png" alt="Farm Buddy" height="120" style="padding-bottom: 10%; "> </a> 
+    
 
         <div class="input-group-prepend" style="width: 250px">
 
@@ -175,6 +177,8 @@ require "../php/Dbcon.php";
     
 
         <a href="#">Having trouble to Log in / Forget Password?</a>
+
+        <label for=""style="color:red"  > <?php echo $notalloed?>     </label>
        
 
         </div>

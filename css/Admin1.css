@@ -81,7 +81,7 @@ background-color:azure;
     width:170px;
     margin-right:20px;
     margin-top: 20px;
-    margin-left: 60px;
+    margin-left: 25px;
     
     position: fixed;
         
@@ -135,11 +135,11 @@ a {
 
 #container{
 
-background-color: green;
+//background-color: green;
 width: 1050px;
 height: 500px;
 margin-top: 20px;
-margin-left: 245px;
+margin-left:200px;
     ;
     
     display:;
@@ -148,9 +148,10 @@ margin-left: 245px;
 #u-req{
    position: relative;
  background-color: aliceblue;
-    width: 1050px;
+    width: 1250px;
      height: 500px;
      float:left;
+   padding-right: -200px;
    
     
   
@@ -165,6 +166,9 @@ margin-left: 245px;
   
      
 }
+
+
+
 td {
    font-family: 'Nanum Gothic', sans-serif;
   }
@@ -185,10 +189,13 @@ border-style: solid;
 td{
     
     text-align: center;
-    background-color: bisque;
+    
+   background-color: bisque;
     
     
 }
+
+
 #clientdata{
     
 margin-top: 100px;    
@@ -198,6 +205,13 @@ margin-top: 100px;
     
     
     
+    
+    
+}
+
+#client{
+    
+    position:absolute;
     
     
 }
