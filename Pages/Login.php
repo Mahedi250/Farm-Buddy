@@ -46,13 +46,18 @@ require "../php/Dbcon.php";
          $emp_id = $row['emp_id'];
          $client_id= $row['client_id'];
          $man_id= $row['man_id'];
+         $activity= $row['activity'];
+         
 
-         echo $client_id;
+
+        
          
 
         }
 
         if($uPassInDB==$uPass){
+
+          if($activity!=0){
           $_SESSION["username"]=$uName;
          
 
@@ -80,7 +85,12 @@ require "../php/Dbcon.php";
 
           }
          
-         
+        }
+
+        else{
+          $uPassErr = "you are not allowed";
+
+        }
         
         
         }else{

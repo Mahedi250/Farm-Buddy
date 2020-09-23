@@ -118,7 +118,18 @@ function selectedItem(){
 
            params='name='+ful_namev+'&email='+emailv+'&conatct='+contactv+'&username='+usernamev+'&password='+passordv+'&usertype='+userv;
 
-           loadResponsePost(params);
+           var res=loadResponsePost(params);
+
+           if(res!=0){
+
+    
+            window,location.href="index.html";
+         
+         
+         
+             }
+           
+
        
          }
 
@@ -140,10 +151,19 @@ function selectedItem(){
  
    
 
-   alert(arr);
+  
 
     params='name='+ful_namev+'&email='+emailv+'&conatct='+contactv+'&username='+usernamev+'&password='+passordv+'&cname='+cnamev+'&c_country='+c_countryv+'&c_add='+c_addv+'&c_li='+c_liv+'&usertype='+userv+'&system='+arr; 
-    loadResponsePost(params);
+    var res=loadResponsePost(params);
+
+    if(res!=0){
+
+    
+   window,location.href="index.html";
+
+
+
+    }
   
     
  }
@@ -609,9 +629,9 @@ return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.te
  
     xhr.onload = function(){
       if(this.status == 200){
-      document.write("hoisee mama!!");
+      return 1;
       }else if(this.status == 404){
-        document.write("hoinai  mama!!");
+        return 0;
       }
     };
 

@@ -17,11 +17,11 @@ $db=0;
 
   $id=$_POST['id'];
   $u_type=$_POST['u_type'];
-  if($remove==0){
+  if(!empty($_POST['remove'])){
 
-   $remove=$_POST['remove'];
-
-  }
+    $remove=$_POST['remove'];
+ 
+   }
 
 
  
@@ -35,7 +35,7 @@ $db=0;
 
         $sql4="DELETE FROM `temp_admin` WHERE a_id=$id";
 
-        $res2=$db->ExecuteQuery($sql3);
+        $res2=$db->ExecuteQuery($sql4);
         if($res2>1){
 
             echo 1;
@@ -57,8 +57,8 @@ $db=0;
            $username= $row['username'];
            $password=$row['password'];
            
-            $sql2="INSERT INTO `credentials`( `Username`, `Password`, `User_type`,`emp_id`, `client_id`, `man_id`) VALUES
-             ('$username','$password',$u_type,'$id',null,null)";
+            $sql2="INSERT INTO `credentials`( `Username`, `Password`, `User_type`,`emp_id`, `client_id`, `man_id`,activity) VALUES
+             ('$username','$password',$u_type,'$id',null,null,1)";
     
     
         }
@@ -151,8 +151,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"&& $_POST['u_type']==2){
          $password=$row['password'];
          $system=$row['m_system'];
          
-          $sql2="INSERT INTO `credentials`( `Username`, `Password`, `User_type`,`emp_id`, `client_id`, `man_id`) VALUES
-           ('$username','$password',$u_type,null,'$id',null)";
+          $sql2="INSERT INTO `credentials`( `Username`, `Password`, `User_type`,`emp_id`, `client_id`, `man_id`,activity) VALUES
+           ('$username','$password',$u_type,null,'$id',null,1)";
   
   
       }
@@ -199,8 +199,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"&& $_POST['u_type']==2){
 
 
 }
-
-
 
 
 

@@ -103,9 +103,22 @@ $sql="select * from temp_admin where a_id='$emp_id'";
 
         <div id="m-user">
 
+       <div>
+        <h1>Manage user</h1>
+          
+             
+        <div id="current_user">
+            
+            
+            
+        </div>           
+           
+           
+           
+           
+       </div>
 
-
-            <h1>Mange user</h1>
+            
 
 
         </div>
@@ -273,7 +286,7 @@ $sql="select * from temp_admin where a_id='$emp_id'";
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     <script src="../js/admin1.js"></script>
-    <script src="../js/awork.js"></script>
+    
 
 
     <script>
@@ -301,7 +314,7 @@ $sql="select * from temp_admin where a_id='$emp_id'";
 
 
         function Approveuser($id, $usertype) {
-
+            if( confirm("Are You sure?") ){
             var xhr = new XMLHttpRequest();
             var params = "id=" + $id + '&u_type=' + $usertype;
             xhr.open('POST', '../php/approval.php', true);
@@ -325,9 +338,52 @@ $sql="select * from temp_admin where a_id='$emp_id'";
 
 
             }
+        }
+
+        }
+
+        function SetuserActivity($cred_id){
+            $a_staus=0;
+       $activity=document.getElementById('user_activity');
+
+       if($activity.checked==true){
+
+        $a_staus=1;
+
+       
+       }
+       else{
+
+        $a_staus=0;
+         
+       }
+       
+
+
+     $parms="act_value="+$a_staus+'&cred_id='+$cred_id;
+
+
+var xhr = new XMLHttpRequest();
+   
+xhr.open('POST','../php/update_activity.php', true);
+xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhr.send($parms);
+xhr.onload = function(){
+    if(xhr.status == 200){
+                     
+    }else if(this.status == 404){
+   
+  }
+};
+
+
+
+
 
 
         }
+
+        //set user finish;
 
         function loadResponsePostclient() {
 
@@ -350,7 +406,7 @@ $sql="select * from temp_admin where a_id='$emp_id'";
         function Declineuser($id, $usertype, $remove) {
 
 
-
+        if( confirm("Are You sure?") ){
             var xhr = new XMLHttpRequest();
             var params = "id=" + $id + '&u_type=' + $usertype + '&remove=' + $remove;
             xhr.open('POST', '../php/approval.php', true);
@@ -375,11 +431,26 @@ $sql="select * from temp_admin where a_id='$emp_id'";
 
             }
 
+        }
 
+        window.onload=function(){
+  
+    
+ 
+  loadResponsePost();
+  loadResponsePostclient();
+
+ 
+ };
 
 
         }
+
+
+       
     </script>
+
+<script src="../js/awork.js"></script>
 
     <!-- Js end-->
 

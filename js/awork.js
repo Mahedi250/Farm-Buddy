@@ -7,7 +7,6 @@ var man_btn=document.getElementById('Manage-user');
 var req_box=document.getElementById('u-req');
 var man_box=document.getElementById('m-user');
 
-
 req_btn.addEventListener('click',function(e){
  
     e.preventDefault();
@@ -22,6 +21,8 @@ man_btn.addEventListener('click',function(e){
     e.preventDefault();
     req_box.style.display="none";
     man_box.style.display="";
+
+    loadResponse_current_user();
 
 });
 
@@ -65,6 +66,24 @@ function loadResponsePost(){
       }
     };
   }
+
+  function loadResponse_current_user(){
+   
+    var xhr = new XMLHttpRequest();
+   
+    xhr.open('POST','../php/current_user.php', true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.send();
+    xhr.onload = function(){
+        if(xhr.status == 200){
+        document.getElementById('current_user').innerHTML=this.responseText;                     //
+        }else if(this.status == 404){
+       
+      }
+    };
+  }
+
+
 
 
 
@@ -110,6 +129,10 @@ function Approveuser($id,$usertype){
 
 window.onload=function(){
   
+    
     selectedItem();
+    loadResponsePost();
+    loadResponsePostclient();
+
    
    };
