@@ -90,7 +90,7 @@ $sql="select * from temp_admin where a_id='$emp_id'";
 
         <div class="list-group" id="sidebar">
             <a id="user-req" class="list-group-item" href=""><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; User Request</a>
-            <a id="Manage-user" class="list-group-item" href=""><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; Mange User</a>
+            <a id="Manage-user" class="list-group-item" href=""><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; Manage User</a>
 
         </div>
 

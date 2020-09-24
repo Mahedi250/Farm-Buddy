@@ -74,7 +74,7 @@ require "../php/Dbcon.php";
 
             $_SESSION["id"] =$client_id;
 
-
+            header("Location:Admin2.php");
 
           }
 

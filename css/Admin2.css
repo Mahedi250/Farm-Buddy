@@ -1,0 +1,350 @@
+
+#popup{
+    
+    background: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    justify-content: center;
+    display:none;
+    align-items: center;
+    position: fixed;
+    
+    
+    
+}
+#popup-con{
+    margin-top: 100px;
+    height: 580px;
+    width: 900px;
+    padding-bottom:530px;
+    margin-bottom: 100px;;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    position: relative;
+    
+    
+}
+#close{
+    
+position: relative;
+    float: right;
+    margin-right: 9px;
+    margin-top: 10px;
+    margin-left: 2px;
+    background-color: white;
+    
+    border-radius: 5px;
+    border-color:red;
+    cursor: pointer;
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+.navbar{
+    
+    height: 70px;
+    width: auto;
+  
+    position: relative;
+     margin-left:1000 px;
+    margin: 15px 200px 2px 200px;
+   
+   
+   
+ border-style:solid;
+    border-color: green;   
+background-color:burlywood;
+ 
+  
+    
+}
+
+
+
+
+#sidebar{
+    
+   
+    
+    width:170px;
+    margin-right:20px;
+    margin-top: 20px;
+    margin-left: 25px;
+    
+    position: fixed;
+        
+    
+    
+}
+
+.navbar-brand{
+
+
+margin-right: 20px;
+
+
+
+
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+.profile{
+    
+   
+   
+    
+    
+    position: relative;
+    margin-left:100px;
+    margin-top: 100px;
+     width: 700px;
+    height: 450px;
+
+    box-shadow: 5px -10px -5px 4px;
+    border-radius: 10px;
+    
+    
+    
+}
+
+.profile table{
+    align:"center";
+    
+   border: =2px;    
+    text-align:left;
+    
+    
+    
+}
+
+#container{
+
+//background-color: green;
+width: 1137px;;
+height: 500px;
+margin-top: 20px;
+margin-left:200px;
+   border-style: solid;
+    border-color: blue;
+    
+    display:;
+}
+
+#u-req{
+   position: relative;
+ background-color: whitesmoke;
+    width: 1130px;
+     height: 495px;
+     float:left;
+   padding-right: -200px;
+   
+    
+  
+    
+}
+
+#m-user{
+   background-color: whitesmoke;
+   position: absolute;
+     width: 1130px;
+   height: 495px;
+  
+     
+}
+
+.system-card{
+    
+    
+    background-color:azure;
+    width: 180px;
+    height: 180px;
+    margin-left: 25px;
+    border-radius: 10px;
+    margin-top: 25px;
+    text-align: center;
+    border-style: groove;
+    
+    transition: 1s; 
+       float: left;
+    
+    
+    
+}
+.system-card>label{
+    
+    margin-top: 70px;
+    
+    
+    
+}
+.system-card:hover{
+    
+    transform: scale(1.1);
+
+   
+    box-shadow: 2px 2px 2px #000;
+    z-index: 1;
+    
+    
+}
+
+
+
+td {
+   font-family: 'Nanum Gothic', sans-serif;
+  }
+
+th{
+    
+    text-align: center;
+    
+}
+
+tr{
+    
+border-style: solid;
+    
+    
+}
+
+td{
+    
+    text-align: center;
+    
+   background-color: bisque;
+    
+    
+}
+
+
+#clientdata{
+    
+margin-top: 100px;    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+#client{
+    
+    position:absolute;
+    
+    
+}
+
+
+
+//current user activity style
+
+#current_user{
+    
+    
+    position: relative;
+    
+    
+    
+}
+
+.switch {
+  position: relative;
+ 
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:red;
+  -webkit-transition: .4s;
+  transition: .4s;
+    
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color:  #2ecc71;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+//manager css
+.m-data-send{
+    
+    margin-left: 30px;
+    
+    
+}
+
+.m-data-send label{
+    
+    margin-left: 5px;
+    
+    
+    
+}
+
+#sys-select{
+    
+    
+    margin-left: 400px;
+    margin-top: 10px;
+}
+
+#man_btn{
+    
+    margin-left: 240px;
+    margin-top: 4px;
+    
+    
+}

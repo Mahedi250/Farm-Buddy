@@ -147,7 +147,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"&& $_POST['u_type']==2){
       while($row = mysqli_fetch_assoc($res)){
   
   
-         $username= $row['Username'];
+         $username= $row['username'];
          $password=$row['password'];
          $system=$row['m_system'];
          
