@@ -81,6 +81,48 @@ require "../php/Dbcon.php";
           else if($usertype==3){
 
             $_SESSION["id"] =$man_id;
+       
+
+          
+            $db = new DataAccess();
+            $sql="SELECT system  FROM maneger WHERE com_id='$man_id'";
+               $result=$db->GetData($sql);
+            
+               $row = mysqli_fetch_assoc($result);
+               $man_system=$row['system'];
+
+
+
+               $db = new DataAccess();
+               $sql=" SELECT * FROM `client_temp` WHERE Com_id='$man_id'";
+                  $result=$db->GetData($sql);
+               
+                  $row = mysqli_fetch_assoc($result);
+                  $owner_name=$row['full name'];
+                  $_SESSION["owner_name"] = $owner_name;
+              
+            
+
+if($man_system==1){
+
+  header("Location:Poultry.php");
+
+
+
+}
+else{
+
+
+  header("Location:Dairy.php");
+
+
+
+}
+
+
+
+
+
 
 
 

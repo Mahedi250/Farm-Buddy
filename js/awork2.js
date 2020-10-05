@@ -1,5 +1,5 @@
 
-
+ var system=0;
 
 function selectedItem(){
 
@@ -22,6 +22,7 @@ man_btn.addEventListener('click',function(e){
     e.preventDefault();
     req_box.style.display="none";
     man_box.style.display="";
+    loadResponsePostclient();
 
    
 });
@@ -36,7 +37,7 @@ var ev="";
 var uv="";
 var pv="";
 
-    var system=0;
+   
 
     
    
@@ -45,15 +46,16 @@ var pv="";
     var m_email=document.getElementById('m_email');
     var m_user=document.getElementById('m_user');
     var m_pass=document.getElementById('m_pass');
-    //var m_system=document.getElementById('sys-select');
+    var m_system=document.getElementById('sys-select');
     var m_btn=document.getElementById('man_btn');
     var m_op=document.getElementById('system-opn');
     
+    
+    system=m_op.options[0].value;
 
+    m_system.addEventListener('change',function(){
 
-    m_op.addEventListener('change',function(){
-
-
+      
    
     
       system=m_op.options[m_op.selectedIndex].value; 
@@ -96,11 +98,16 @@ var pv="";
 
      var jsonstring=JSON.stringify(manager);
 
-     console.log(jsonstring);
+     
+     loadResponsePost(jsonstring);
 
+
+     m_fn.value=m_email.value=m_user.value=m_pass.value="";
 
 
      }
+
+     loadResponsePostclient();
 
 
 })
@@ -222,16 +229,16 @@ function isemail(email){
 
 
 
-/*function loadResponsePost(){
+function loadResponsePost(data){
    
     var xhr = new XMLHttpRequest();
-    var params = "n="+my_name;
-    xhr.open('POST','../php/admindata.php', true);
-    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhr.send(params);
+    
+    xhr.open('POST','../php/managerdata.php', true);
+    xhr.setRequestHeader('Content-type', 'application/json');
+    xhr.send(data);
     xhr.onload = function(){
         if(xhr.status == 200){
-        document.getElementById('admindata').innerHTML=this.responseText;   
+          
         }else if(this.status == 404){
        
       }
@@ -240,20 +247,20 @@ function isemail(email){
   function loadResponsePostclient(){
    
     var xhr = new XMLHttpRequest();
-    var params = "n="+my_name;
-    xhr.open('POST','../php/clientdata.php', true);
+    
+    xhr.open('POST','../php/getmandata.php', true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhr.send(params);
+    xhr.send();
     xhr.onload = function(){
         if(xhr.status == 200){
-        document.getElementById('client').innerHTML=this.responseText;                     //
+        document.getElementById('man_data').innerHTML=this.responseText;                     //
         }else if(this.status == 404){
        
       }
     };
   }
 
-  function loadResponse_current_user(){
+  /*function loadResponse_current_user(){
    
     var xhr = new XMLHttpRequest();
    
@@ -318,6 +325,6 @@ window.onload=function(){
  
 
     selectedItem();
-    
+   
    
    };

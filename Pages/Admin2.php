@@ -63,7 +63,7 @@ else{
 
 
 
-    $data .='<a href=""> <div class="system-card">
+    $data .='<a href="Dairy.php"> <div class="system-card">
     <i class="fas fa-cow"></i> 
     <label >Dairy Management system </label>
     
@@ -231,7 +231,13 @@ else if($system_opt==2){
 
        <div class="m-data-get">
 
+         <h3>Manager DATA</h3>
+         <div id="man_data">
 
+
+
+
+         </div>
 
 
 
@@ -392,6 +398,68 @@ else if($system_opt==2){
 <script src="../js/awork2.js"></script>
 
 <script src="../js/admin2.js"></script>
+
+
+<script>
+
+
+
+
+
+
+
+function SetuserActivity($cred_id,$a_staus){
+         
+        // $activity=document.getElementById('user_activity');
+  
+        
+  
+          if($a_staus==1){
+  
+              $a_staus=0;
+          }
+          else{
+  
+              $a_staus=1;
+  
+          }
+  
+         
+       
+         
+  
+  
+       $parms="act_value="+$a_staus+'&cred_id='+$cred_id;
+  
+  
+  var xhr = new XMLHttpRequest();
+     
+  xhr.open('POST','../php/update_activity.php', true);
+  xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  xhr.send($parms);
+  xhr.onload = function(){
+      if(xhr.status == 200){
+                 
+      }else if(this.status == 404){
+     
+    }
+  };
+  
+  
+  
+  
+  
+  
+          }
+
+
+
+
+
+
+
+
+</script>
 
 
     <!-- Js end-->
